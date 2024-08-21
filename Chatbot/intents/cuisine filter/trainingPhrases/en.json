@@ -1,0 +1,21 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "feel like eating "
+    }, {
+      "text": "mexican",
+      "parameterId": "cuisine"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "mexican",
+      "parameterId": "cuisine"
+    }, {
+      "text": " cuisine"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

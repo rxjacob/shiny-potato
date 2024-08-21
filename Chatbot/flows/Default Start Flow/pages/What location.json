@@ -1,0 +1,32 @@
+{
+  "name": "2d6f6a13-b4fb-473d-a340-df6d7abd6885",
+  "displayName": "What location",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Please enter your zip code." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "No restaurant",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Bye",
+    "name": "a4a2f31f-6c20-4dfc-b95b-fe3def5d5a23"
+  }, {
+    "intent": "Zip Code entry",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Display city",
+    "name": "644c8d87-fa8d-4f9b-b479-5caaa87fe7c5",
+    "description": "Location"
+  } ],
+  "description": "Asks user for their location"
+}

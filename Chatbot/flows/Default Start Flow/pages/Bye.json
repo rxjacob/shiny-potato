@@ -1,0 +1,25 @@
+{
+  "name": "e02c85f8-2603-4ead-921b-aa6d7c2c92d9",
+  "displayName": "Bye",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Bye!" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "bc7f6eec-0e7e-401e-8d08-b956701b51ac",
+    "description": "End"
+  } ],
+  "description": "Goodbye"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "6ea9ede9-ff9e-4683-9ce7-aaa6a1318d5b",
+  "displayName": "Restaurant Search Page",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Do you want to look for a restaurant?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "No restaurant",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Bye",
+    "name": "26fd222e-be2c-4222-91ae-76012febeea5",
+    "description": "Not looking for a restaurant"
+  }, {
+    "intent": "Yes restaurant",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "What location",
+    "name": "8217e5d2-bfa1-4af6-ba97-58596eb661df"
+  } ],
+  "description": "This page will ask the user if they want to search for a restaurant"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "dbb9aedc-ffe2-4781-b097-2dd52b917297",
+  "displayName": "cuisine filter",
+  "parameters": [ {
+    "id": "cuisine",
+    "entityType": "@sys.any"
+  } ],
+  "priority": 500000,
+  "description": "cuisine filter",
+  "numTrainingPhrases": 2
+}

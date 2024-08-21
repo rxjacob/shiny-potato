@@ -1,0 +1,36 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "T Bell"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Show me ",
+      "auto": true
+    }, {
+      "text": "taco bell"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want ",
+      "auto": true
+    }, {
+      "text": "In-N-Out"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to go to ",
+      "auto": true
+    }, {
+      "text": "In-N-Out"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

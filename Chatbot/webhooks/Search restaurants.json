@@ -1,0 +1,10 @@
+{
+  "name": "4fe95ad5-c467-48a9-9132-ed5a987707ae",
+  "displayName": "Search restaurants",
+  "genericWebService": {
+    "uri": "https://us-central1-bubbly-sentinel-424217-r3.cloudfunctions.net/search_restaurants"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

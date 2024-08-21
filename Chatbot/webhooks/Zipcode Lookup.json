@@ -1,0 +1,10 @@
+{
+  "name": "25a14566-1ce7-4997-a4a4-19d9258ae103",
+  "displayName": "Zipcode Lookup",
+  "genericWebService": {
+    "uri": "https://us-central1-bubbly-sentinel-424217-r3.cloudfunctions.net/zipcode_city_lookup"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

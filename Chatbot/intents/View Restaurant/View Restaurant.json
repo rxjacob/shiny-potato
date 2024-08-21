@@ -1,0 +1,10 @@
+{
+  "name": "a219f457-f160-4ce4-9886-abf74df41b3b",
+  "displayName": "View Restaurant",
+  "parameters": [ {
+    "id": "restaurant-name",
+    "entityType": "@restaurant-name"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

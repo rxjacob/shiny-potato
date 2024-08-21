@@ -1,0 +1,11 @@
+{
+  "name": "0a0e37c5-794e-4575-be3f-926785cb12a6",
+  "displayName": "Zip Code entry",
+  "parameters": [ {
+    "id": "zipcode",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "description": "Accepts zip code from user",
+  "numTrainingPhrases": 4
+}

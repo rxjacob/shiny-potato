@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "In-N-Out",
+    "synonyms": [ "In-N-Out", "in\u0026out" ],
+    "languageCode": "en"
+  }, {
+    "value": "Taco Bell",
+    "synonyms": [ "T Bell", "Taco B", "Taco Bell" ],
+    "languageCode": "en"
+  } ]
+}

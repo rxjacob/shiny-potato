@@ -1,0 +1,11 @@
+{
+  "name": "91dda8c1-8e41-44b6-9780-bc3cd7b046fa",
+  "displayName": "Price filter",
+  "parameters": [ {
+    "id": "price",
+    "entityType": "@sys.any"
+  } ],
+  "priority": 500000,
+  "description": "Price filter",
+  "numTrainingPhrases": 4
+}

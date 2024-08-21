@@ -1,0 +1,32 @@
+{
+  "name": "53653670-29ec-403e-bd10-b28e3c2c6ec3",
+  "displayName": "Looking for Restaurants",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Search restaurants",
+    "tag": "search restaurants tag"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Filter Restaurants",
+    "name": "57dcd434-9b1c-4c74-8f1c-5b003e18b365"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Bye",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got error looking for restaurants" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5dbc9791-f77d-4e2e-a504-d8d4d0d08460"
+  } ]
+}

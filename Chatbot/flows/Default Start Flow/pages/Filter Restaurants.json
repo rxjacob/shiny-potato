@@ -1,0 +1,45 @@
+{
+  "name": "b77b8620-2775-409a-87b0-eb97125d4650",
+  "displayName": "Filter Restaurants",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You can tailor these results by letting me know your cuisine and price range preferences." ]
+      },
+      "languageCode": "en"
+    } ],
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "No restaurant",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Bye",
+    "name": "b5bba363-5c48-4dfc-889b-a2b8e2858389",
+    "description": "Exit"
+  }, {
+    "intent": "Price filter",
+    "triggerFulfillment": {
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "Display Filtered Restaurants",
+    "name": "3b94e774-1468-4428-b14b-c3ab469ba6ae",
+    "description": "Price filter"
+  }, {
+    "intent": "cuisine filter",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Display Filtered Restaurants",
+    "name": "ec44284d-7445-42b2-80f4-f877a9e9418b",
+    "description": "Cuisine filter"
+  } ]
+}

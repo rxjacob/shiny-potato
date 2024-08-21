@@ -1,0 +1,41 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "show me "
+    }, {
+      "text": "low",
+      "parameterId": "price"
+    }, {
+      "text": " cost restaurants"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Medium",
+      "parameterId": "price"
+    }, {
+      "text": " expensive"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "High",
+      "parameterId": "price"
+    }, {
+      "text": " end"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Low",
+      "parameterId": "price"
+    }, {
+      "text": " cost"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "3249dee0-da05-413c-b84e-c5c9d0a06c17",
+  "displayName": "Display city",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Zipcode Lookup",
+    "tag": "zipcode lookup tag"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Looking for Restaurants",
+    "name": "ca5d570f-f524-4db1-9347-27b8cb956ca5"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Bye",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Webhook error" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "36e1eaf6-9ea7-4eb0-b974-cab0ae9c13cc"
+  } ]
+}

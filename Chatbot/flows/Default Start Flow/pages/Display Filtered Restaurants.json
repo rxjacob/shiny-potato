@@ -1,0 +1,38 @@
+{
+  "name": "529f08ff-586d-43de-9c8e-fd1f9497932e",
+  "displayName": "Display Filtered Restaurants",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Search restaurants filter",
+    "tag": "search restaurants filter",
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Filter Restaurants",
+    "name": "111c0455-9234-48e7-9c6e-d58f777e6ad3"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "Bye",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got error filtering restaurants" ]
+        },
+        "languageCode": "en"
+      } ],
+      "nextActionOverride": {
+      
+      }
+    },
+    "name": "84d0efda-9352-4c75-9d0c-5c00fb60aa64"
+  } ]
+}
