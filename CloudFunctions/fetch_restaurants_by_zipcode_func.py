@@ -4,7 +4,6 @@ import pg8000
 import os
 from google.cloud.sql.connector import Connector, IPTypes
 
-# entry function
 @functions_framework.http
 def get_restaurants_by_zipcode(request):
     request_json = request.get_json()
@@ -21,7 +20,7 @@ def get_restaurants_by_zipcode(request):
 
         for row in rows:
             text = text + "\n*\t" + row[0]
-        text = text + "\n\nYou can tailor these results by letting me know your cuisine and price range preferences.\n\n"
+        text = text + "\n\n"
     
         if db_conn is not None:
             db_conn.close()

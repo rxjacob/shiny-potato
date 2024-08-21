@@ -4,13 +4,11 @@ import pg8000
 import os
 from google.cloud.sql.connector import Connector, IPTypes
 
-
-# entry function
 @functions_framework.http
 def get_restaurants_by_zipcode_cuisine(request):
     request_json = request.get_json()
 
-    zip_code = request_json["zipcode"]
+    zip_code = request_json["zip_code"]
     cuisine = '%'+request_json["cuisine"]+'%'
     
     stmt = sqlalchemy.text("select name from restaurant_9 where zip_code=:zip and category like :cuisine limit 10")
@@ -22,16 +20,19 @@ def get_restaurants_by_zipcode_cuisine(request):
         rows = db_conn.execute(stmt, parameters={"zip": zip_code, "cuisine": cuisine}).fetchall()
 
         for row in rows:
-            text = text + "\n" + row[0]
-        text = text + "\n"
+            text = text + "\n*\t" + row[0]
+        text = text + "\n\n"
     
-        res = {"fulfillment_response": {"messages": [{"text": {"text": [text]}}]}}
+        if len(rows)==0:
+            text = "Sorry, I couldn't find restaurants matching your criteria. Please try again"
+
+
 
         if db_conn is not None:
             db_conn.close()
 
     # Returns json
-    return res
+    return text
 
 def connect_with_connector() -> sqlalchemy.engine.base.Engine:
     # Cloud Secret Manager secrets exposed as environment variables

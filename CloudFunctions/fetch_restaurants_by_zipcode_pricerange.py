@@ -4,33 +4,50 @@ import pg8000
 import os
 from google.cloud.sql.connector import Connector, IPTypes
 
-# entry function
 @functions_framework.http
 def get_restaurants_by_zipcode_pricerange(request):
     request_json = request.get_json()
 
-    zip_code = request_json["zipcode"]
-    price_range = request_json["pricerange"]
+    zip_code = request_json["zip_code"]
+    price_range = request_json["price_range"]
+
+    if price_range == "low":
+        range1 = "$"
+        range2 = "$$"
+    if price_range == "medium":
+        range1 = "$$$"
+    if price_range == "high":
+        range1 = "$$$$"
+        range2 = "$$$$$"
     
-    stmt = sqlalchemy.text("select name from restaurant_9 where zip_code=:zip and price_range=:pricerange limit 10")
+    if price_range == "medium":
+        sql = "select name from restaurant_9 where zip_code=:zip and price_range=:range1 limit 10"
+    if price_range == "low" or price_range == "high":
+        sql = "select name from restaurant_9 where zip_code=:zip and (price_range=:range1 or price_range=:range2) limit 10"
+
+    stmt = sqlalchemy.text(sql)
 
     text = "Here is a list of restaurants: "
 
     with connect_with_connector().connect() as db_conn:
         # read from database
-        rows = db_conn.execute(stmt, parameters={"zip": zip_code, "pricerange": price_range}).fetchall()
+        if price_range == "medium":
+            rows = db_conn.execute(stmt, parameters={"zip": zip_code, "range1": range1}).fetchall()
+        if price_range == "low" or price_range == "high":
+            rows = db_conn.execute(stmt, parameters={"zip": zip_code, "range1": range1, "range2": range2}).fetchall()
 
         for row in rows:
-            text = text + "\n" + row[0]
-        text = text + "\n"
-    
-        res = {"fulfillment_response": {"messages": [{"text": {"text": [text]}}]}}
+            text = text + "\n*\t" + row[0]
+        text = text + "\n\n"
+
+        if len(rows)==0:
+            text = "Sorry, I couldn't find restaurants matching your criteria. Please try again"
 
         if db_conn is not None:
             db_conn.close()
 
     # Returns json
-    return res
+    return text
 
 def connect_with_connector() -> sqlalchemy.engine.base.Engine:
     # Cloud Secret Manager secrets exposed as environment variables

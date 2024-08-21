@@ -3,7 +3,6 @@ import requests
 import os
 
 
-# entry function
 @functions_framework.http
 def search_restaurants(request):
 
