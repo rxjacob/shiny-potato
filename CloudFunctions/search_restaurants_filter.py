@@ -2,7 +2,7 @@ import functions_framework
 import requests
 import os
 
-
+# entry function
 @functions_framework.http
 def search_restaurants_filter(request):
 

@@ -4,6 +4,7 @@ import pg8000
 import os
 from google.cloud.sql.connector import Connector, IPTypes
 
+# entry function
 @functions_framework.http
 def get_restaurants_by_zipcode(request):
     request_json = request.get_json()

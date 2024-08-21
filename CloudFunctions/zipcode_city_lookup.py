@@ -3,6 +3,7 @@ import requests
 import json
 import os
 
+# entry function
 @functions_framework.http
 def city_lookup(request):
     request_json = request.get_json()
